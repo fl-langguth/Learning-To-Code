@@ -1,2 +1,2 @@
 # Learning To Code
- Projects done for my Codacademy course "Computer Science".
+ Repository for the projects I made for my Codacademy course "Computer Science".
