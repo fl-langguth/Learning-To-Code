@@ -1,0 +1,1 @@
+Final Project for the module CS101: Introduction to Programming, Codecademy course, Computer Science.

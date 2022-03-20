@@ -1,13 +1,17 @@
-# Final Project of the module "CS101: Introduction to Programming" from the Codecademy Computer Scienc course.
-# Coded by Florian Langguth
-
-# Funktion für das Spiel
-# In einer Liste wird die vom Spieler gegebene Zahl mit X oder O ersetzt.
-# Spieler 1 ist X und Spieler 2 ist O
-# Das Spiel ist zu Ende, wenn 9 Runden gespielt wurden.
-
 ttt_ply_rnd = 0.0 
 ttt_glst = ['1','2','3','4','5','6','7','8','9']
+
+#start in-progress
+class Game:
+    board = []
+    rcount_game = 0
+    def __init__(self):
+        pass
+
+    def update(self, ply_ipt, id):
+        if id == 1:
+            Game.board[ply_ipt-1] = "X"
+# end in-progress
 
 def upd_game(lst):
     # if len(lst) % 3 == 0:
@@ -22,9 +26,6 @@ def ttt_update(player, player_input, lst):
     else:
         lst[player_input-1] = "O"
 
-
-
-
 print("""
     TTTTTTTTT III    CCCCCC     TTTTTTTTT   AAAA      CCCCCC     TTTTTTTTT  OOOOOO   EEEEEE
        TTT    III   CCC            TTT     AA  AA    CCC            TTT    OO    OO  EEE
@@ -34,6 +35,7 @@ print("""
 """)
 print("")
 print("This is a simple 2 Player Tic-Tac-Toe Game. Each Player will be asked for a number from 1 to 9.")
+print("")
 
 upd_game(ttt_glst)
 
@@ -58,10 +60,12 @@ while ttt_ply_rnd != 4.5:
         upd_game(ttt_glst)
         # Rounds counter +0.5
         ttt_ply_rnd += 0.5
-    print(ttt_ply_rnd)
 
 print("Game End")
 
+# Open to develop:
 # Add function to identify the winner.
+# Add check to prevent players from playing a number twice.
+# Replacing game function by a class
 
 
